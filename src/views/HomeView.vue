@@ -1,8 +1,10 @@
 <template>
-  <div class="bg-[#FFFFFF] relative xl:left-16 2xl:left-0">
-    <section class="max-w-[1200px] mx-auto min-h-screen flex gap-10">
+  <div class="bg-[#FFFFFF] xl:relative xl:left-16 2xl:left-0">
+    <section
+      class="max-w-[1200px] xl:mx-auto min-h-screen xl:flex xl:gap-10 px-0 xl:px-auto"
+    >
       <NavbarVue navSelected="home" />
-      <main class="flex-1">
+      <main class="xl:flex-1">
         <MainContentVue />
       </main>
     </section>

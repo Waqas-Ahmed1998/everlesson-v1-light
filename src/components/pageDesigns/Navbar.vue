@@ -1,6 +1,6 @@
 <template>
   <nav
-    :class="`min-h-screen flex bg-white justify-between fixed left-2 z-[200] ${
+    :class="`hidden min-h-screen xl:flex bg-white justify-between fixed left-2 z-[200] ${
       sideNavCollapse ? 'border-r' : 'border-none'
     }`"
   >

@@ -1,5 +1,5 @@
 <template>
-  <aside class="hidden lg:block lg:basis-[390px] space-y-8">
+  <aside class="block lg:basis-[390px] space-y-8 my-10 xl:my-0">
     <main class="bg-[#F1F1F5] px-9 rounded-[9px] py-11">
       <!-- membership  -->
       <section id="membership" class="pb-6 border-b border-[#D5D5DC]">

@@ -1,10 +1,10 @@
 <template>
   <footer
-    class="w-full bg-[#F1F1F5] flex flex-col px-4 md:px-6 lg:px-8 xl:px-20 py-5 rounded-[9px]"
+    class="w-full bg-[#F1F1F5] flex flex-col px-7 lg:px-16 xl:px-20 py-10 lg:py-5 lg:rounded-[9px]"
   >
     <!-- logo links and social wrapper -->
     <div
-      class="flex h-fit w-full items-center justify-between py-10 border-b border-[#D5D5DC]"
+      class="flex flex-col lg:flex-row h-fit w-full lg:items-center justify-between lg:border-b border-[#D5D5DC]"
     >
       <!-- logo  -->
       <span
@@ -12,45 +12,49 @@
         >E</span
       >
       <!-- footer links  -->
-      <div class="flex gap-6">
-        <span
-          class="roboto-font font-light text-sm text-[#92929C] [@media(hover:hover)]:hover:text-[#0062FF]/60 transition-colors ease-in-out duration-150"
-        >
-          <router-link to="/">HOME</router-link></span
-        >
-        <span
-          class="roboto-font font-light text-sm text-[#92929C] [@media(hover:hover)]:hover:text-[#0062FF]/60 transition-colors ease-in-out duration-150"
-        >
-          <router-link to="/">COURSE</router-link></span
-        >
-        <span
-          class="roboto-font font-light text-sm text-[#92929C] [@media(hover:hover)]:hover:text-[#0062FF]/60 transition-colors ease-in-out duration-150"
-        >
-          <router-link to="/">NEWSFEED</router-link></span
-        >
-        <span
-          class="roboto-font font-light text-sm text-[#92929C] [@media(hover:hover)]:hover:text-[#0062FF]/60 transition-colors ease-in-out duration-150"
-        >
-          <router-link to="/">CONTEST</router-link></span
-        >
-        <span
-          class="roboto-font font-light text-sm text-[#92929C] [@media(hover:hover)]:hover:text-[#0062FF]/60 transition-colors ease-in-out duration-150"
-        >
-          <router-link to="/">SURVEY</router-link></span
-        >
-        <span
-          class="roboto-font font-light text-sm text-[#92929C] [@media(hover:hover)]:hover:text-[#0062FF]/60 transition-colors ease-in-out duration-150"
-        >
-          <router-link to="/">SUPPORT</router-link></span
-        >
-        <span
-          class="roboto-font font-light text-sm text-[#92929C] [@media(hover:hover)]:hover:text-[#0062FF]/60 transition-colors ease-in-out duration-150"
-        >
-          <router-link to="/">CONTACT US </router-link></span
-        >
+      <div class="flex flex-row gap-6 justify-between py-10">
+        <div class="flex flex-col lg:flex-row gap-6">
+          <span
+            class="roboto-font font-light text-sm text-[#92929C] [@media(hover:hover)]:hover:text-[#0062FF]/60 transition-colors ease-in-out duration-150"
+          >
+            <router-link to="/">HOME</router-link></span
+          >
+          <span
+            class="roboto-font font-light text-sm text-[#92929C] [@media(hover:hover)]:hover:text-[#0062FF]/60 transition-colors ease-in-out duration-150"
+          >
+            <router-link to="/">COURSE</router-link></span
+          >
+          <span
+            class="roboto-font font-light text-sm text-[#92929C] [@media(hover:hover)]:hover:text-[#0062FF]/60 transition-colors ease-in-out duration-150"
+          >
+            <router-link to="/">NEWSFEED</router-link></span
+          >
+          <span
+            class="roboto-font font-light text-sm text-[#92929C] [@media(hover:hover)]:hover:text-[#0062FF]/60 transition-colors ease-in-out duration-150"
+          >
+            <router-link to="/">CONTEST</router-link></span
+          >
+        </div>
+        <div class="flex gap-6 flex-col lg:flex-row">
+          <span
+            class="roboto-font font-light text-sm text-[#92929C] [@media(hover:hover)]:hover:text-[#0062FF]/60 transition-colors ease-in-out duration-150"
+          >
+            <router-link to="/">SURVEY</router-link></span
+          >
+          <span
+            class="roboto-font font-light text-sm text-[#92929C] [@media(hover:hover)]:hover:text-[#0062FF]/60 transition-colors ease-in-out duration-150"
+          >
+            <router-link to="/">SUPPORT</router-link></span
+          >
+          <span
+            class="roboto-font font-light text-sm text-[#92929C] [@media(hover:hover)]:hover:text-[#0062FF]/60 transition-colors ease-in-out duration-150"
+          >
+            <router-link to="/">CONTACT US </router-link></span
+          >
+        </div>
       </div>
       <!-- social links  -->
-      <div class="flex gap-10 items-center">
+      <div class="flex gap-10 justify-center lg:justify-start items-center">
         <a href=""
           ><i
             ><svg
@@ -103,7 +107,7 @@
       </div>
     </div>
     <!-- disclaimer  -->
-    <div class="flex items-center justify-center gap-6 py-10 text-xs">
+    <div class="flex items-center justify-center gap-6 pt-8 lg:py-10 text-xs">
       <span class="roboto-font font-light text-[#92929C]">
         <a href="">PRIVACY POLICY </a></span
       >

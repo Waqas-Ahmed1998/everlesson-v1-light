@@ -1,15 +1,18 @@
 <template>
-  <section id="videoContent" class="max-w-[758px]">
+  <section
+    id="videoContent"
+    class="xl:max-w-[758px] bg-[#F1F1F5] lg:bg-transparent pt-7 lg:pt-0 rounded lg:rounded-none my-6 lg:my-0"
+  >
     <!-- video container  -->
     <div class="w-full">
-      <div class="mb-9 space-y-1">
+      <div class="xl:mb-9 mb-4 space-y-4 xl:space-y-1 px-4 lg:px-0">
         <h2
-          class="popins-font text-lg md:text-xl lg:text-2xl xl:text-[34px] xl:leading-[52px] font-bold text-[#1C1E21]"
+          class="popins-font text-2xl xl:text-[34px] xl:leading-[52px] font-bold text-[#1C1E21]"
         >
           Workshop Warm-Up Sessions
         </h2>
         <p
-          class="roboto-font font-light text-[#696973] md:text-[15.3px] md:leading-[22px]"
+          class="roboto-font font-light text-[#696973] text-sm md:text-[15.3px] md:leading-[22px] pr-3 xl:pr-0"
         >
           The warmup sessions are created to make sure you get monster results
           with the live workshop. Were also going to reward you as you complete
@@ -17,7 +20,7 @@
         </p>
       </div>
       <!-- video wrapper  -->
-      <div class="flex w-full aspect-auto min-h-[443px]">
+      <div class="flex w-full xl:aspect-auto min-h-[176px] lg:min-h-[443px]">
         <iframe
           class="w-full min-h-full"
           src="https://www.youtube.com/embed/0mm57rH1sTE"
@@ -28,11 +31,12 @@
         ></iframe>
       </div>
       <!-- video watch details  -->
-      <div class="flex items-center gap-6 py-5">
+      <div class="flex items-center gap-2 lg:gap-6 py-3 lg:py-5 px-4 lg:px-0">
         <span
-          class="roboto-font font-light text-[#696973] gap-2 text-sm flex items-center"
-          ><i
+          class="roboto-font font-light text-[#696973] gap-2 text-sm flex lg:items-center"
+          ><i class=""
             ><svg
+              class="scale-[.8] lg:scale-[1] relative top-1 lg:top-0"
               width="22"
               height="15"
               viewBox="0 0 22 15"
@@ -54,10 +58,12 @@
             </svg> </i
           >345 people have watched this</span
         >
+        <div class="w-[1px] border-r h-[40px] lg:hidden"></div>
         <span
-          class="roboto-font font-light text-[#696973] gap-2 text-sm flex items-center"
+          class="roboto-font font-light text-[#696973] gap-2 text-sm flex lg:items-center"
           ><i
             ><svg
+              class="scale-[.8] lg:scale-[1] relative top-1 lg:top-0"
               width="16"
               height="19"
               viewBox="0 0 16 19"
