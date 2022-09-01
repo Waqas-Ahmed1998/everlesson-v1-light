@@ -1,0 +1,52 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.popins-font{
+font-family: 'Poppins', sans-serif;
+}
+.roboto-font {
+font-family: 'Roboto', sans-serif;
+
+}
+.inter-font {
+font-family: 'Inter', sans-serif;
+
+}
+.link:nth-last-of-type(even){
+  border-top: 1px solid #D5DADF !important;
+}
+.helvetica-font{
+  font-family:  Helvetica, sans-serif;
+}
+/* fonts  */
+/*font-family: 'Anton', sans-serif;
+font-family: 'Anybody', cursive;
+font-family: 'Changa', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Domine', serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Francois One', sans-serif;
+font-family: 'Grape Nuts', cursive;
+font-family: 'Inter', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Lobster', cursive;
+font-family: 'Merriweather', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Serif', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Prompt', sans-serif;
+font-family: 'Ranga', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Rubik Bubbles', cursive;
+font-family: 'Send Flowers', cursive;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Tajawal', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Vazirmatn', sans-serif;*/
