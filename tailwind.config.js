@@ -105,13 +105,17 @@ module.exports = {
       80: "20rem",
       96: "24rem",
     },
+
     animation: {
       none: "none",
       spin: "spin 1s linear infinite",
       ping: "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
       pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       bounce: "bounce 1s infinite",
+      opacityStart: "opacityStart 1s ease-in-out",
+      opacityEnd: "opacityEnd 1s ease-in-out",
     },
+
     aspectRatio: {
       auto: "auto",
       square: "1 / 1",
@@ -588,6 +592,16 @@ module.exports = {
         "50%": {
           transform: "none",
           animationTimingFunction: "cubic-bezier(0,0,0.2,1)",
+        },
+      },
+      opacityStart: {
+        "0%, 100%": {
+          opacity: 1,
+        },
+      },
+      opacityEnd: {
+        "0%, 100%": {
+          opacity: 0,
         },
       },
     },

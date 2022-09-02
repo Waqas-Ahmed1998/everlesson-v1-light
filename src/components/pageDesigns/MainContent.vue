@@ -1,5 +1,5 @@
 <template>
-  <section id="mainContent" class="px-0 pt-10 lg:py-10 lg:space-y-10">
+  <section id="mainContent" class="px-0 lg:py-10 lg:space-y-10">
     <!-- sidebard and middle content container  -->
     <section
       class="flex flex-col xl:flex-row w-full xl:gap-7 xl:justify-end 2xl:justify-center px-6"

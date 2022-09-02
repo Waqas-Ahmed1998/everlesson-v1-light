@@ -1,7 +1,7 @@
 <template>
   <section
     id="videoContent"
-    class="xl:max-w-[758px] bg-[#F1F1F5] lg:bg-transparent pt-7 lg:pt-0 rounded lg:rounded-none my-6 lg:my-0"
+    class="xl:max-w-[758px] bg-[#F1F1F5] lg:bg-transparent pt-7 lg:pt-0 rounded lg:rounded-none mb-6 lg:my-0"
   >
     <!-- video container  -->
     <div class="w-full">
