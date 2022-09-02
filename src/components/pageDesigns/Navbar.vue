@@ -98,9 +98,9 @@
         <section
           :class="`transition-transform   ${
             mobileBurgerManue
-              ? ' -translate-x-[0]  ease-out  duration-200 z-[205]  px-2 '
+              ? ' -translate-x-[0]  ease-out  duration-200  z-[205]  px-2 '
               : ' -translate-x-[100%] lg:translate-x-0   ease-in-out duration-300  '
-          } h-screen relative   bg-white flex  shadow-[2px_0_8px_#E7E7EE] lg:shadow-none rounded-[0px_18px_18px_0px] lg:rounded-none  lg:w-fit lg:px-2 flex-col justify-between   pb-10 pt-24 xl:py-12 xl:pb-0`"
+          } h-screen relative   bg-white flex  shadow-[2px_0_8px_#E7E7EE] lg:shadow-none rounded-[0px_18px_18px_0px] lg:rounded-none  w-fit lg:px-2 flex-col justify-between   pb-10 pt-24 xl:py-12 xl:pb-0`"
         >
           <!-- logo  -->
           <span
