@@ -51,7 +51,7 @@
             id=""
             cols="30"
             rows="3"
-            class="roboto-font bg-white w-full px-4 relative z-[2] outline-none overflow-y-hidden [resize:none] h-full text-xs lg:text-sm text-[#696973]"
+            class="roboto-font bg-white w-full px-4 relative z-[2] outline-none overflow-y-hidden [resize:none] h-full text-xs lg:text-sm text-[#696973] focus:outline-none ring-0 focus:ring-0"
           ></textarea>
         </div>
       </div>
