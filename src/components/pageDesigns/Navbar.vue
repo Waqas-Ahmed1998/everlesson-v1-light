@@ -3,7 +3,7 @@
   <div class="">
     <!-- mobile burger manue  -->
     <div
-      class="w-full flex lg:hidden items-center justify-between px-5 pt-8 pb-5"
+      class="w-full flex xl:hidden items-center justify-between px-5 lg:px-10 pt-8 pb-5"
     >
       <span
         class="helvetica-font bg-[#F1F1F5] text-[24.17px] w-[35.33px] h-[35.33px] rounded-full p-1 text-[#92929C] flex items-center justify-center"
@@ -53,13 +53,13 @@
       </span>
     </div>
     <nav
-      :class="`  min-h-screen xl:flex  justify-between fixed top-0 lg:top-auto left-0 lg:left-2  z-[200]   ${
+      :class="`  min-h-screen xl:flex  justify-between fixed top-0 xl:top-auto left-0 xl:left-2  z-[200]   ${
         sideNavCollapse ? 'border-r' : 'border-none'
       }`"
     >
       <!-- nav links wrapper  -->
       <div
-        :class="` transition-opacity lg:opacity-[1] z-[-1]  lg:w-fit   bg-black/50  relative    ${
+        :class="` transition-opacity xl:opacity-[1] z-[-1]  xl:w-fit   bg-black/50  relative    ${
           mobileBurgerManue
             ? '  ease-out  duration-200 opacity-[1] w-[100vw]   '
             : '  duration-300 opacity-[0]   w-0'
@@ -68,7 +68,7 @@
         <!-- mobile nav close icon  -->
         <i
           @click="mobileBurgerManue = false"
-          :class="`absolute inline-block top-8 right-5 z-[220] lg:hidden transition-all ${
+          :class="`absolute inline-block top-8 right-5 z-[220] xl:hidden transition-all ${
             mobileBurgerManue
               ? ' translate-x-[0%] duration-300 ease-out'
               : '-translate-x-[1200%] duration-200 ease-in  '
@@ -99,8 +99,8 @@
           :class="`transition-transform   ${
             mobileBurgerManue
               ? ' -translate-x-[0]  ease-out  duration-200  z-[205]  px-2 '
-              : ' -translate-x-[100%] lg:translate-x-0   ease-in-out duration-300  '
-          } h-screen relative   bg-white flex  shadow-[2px_0_8px_#E7E7EE] lg:shadow-none rounded-[0px_18px_18px_0px] lg:rounded-none  w-fit lg:px-2 flex-col justify-between   pb-10 pt-24 xl:py-12 xl:pb-0`"
+              : ' -translate-x-[100%] xl:translate-x-0   ease-in-out duration-300  '
+          } h-screen relative   bg-white flex  shadow-[2px_0_8px_#E7E7EE] xl:shadow-none rounded-[0px_18px_18px_0px] xl:rounded-none  w-fit xl:px-2 flex-col justify-between   pb-10 pt-24 xl:py-12 xl:pb-0`"
         >
           <!-- logo  -->
           <span
@@ -291,7 +291,7 @@
           <!-- user icon  -->
           <div class="flex w-full items-center justify-center">
             <span
-              class="helvetica-font bg-[#F1F1F5] text-[35.17px] w-[40.33px] h-[40.33px] lg:w-[55.33px] lg:h-[55.33px] rounded-full p-1 text-[#92929C] flex items-center justify-center cursor-pointer"
+              class="helvetica-font bg-[#F1F1F5] text-[35.17px] w-[40.33px] h-[40.33px] xl:w-[55.33px] xl:h-[55.33px] rounded-full p-1 text-[#92929C] flex items-center justify-center cursor-pointer"
             >
               <i
                 ><svg
@@ -397,7 +397,7 @@
           <!-- nav search bar and heading   -->
           <div class="px-6 space-y-14 mb-14">
             <h2
-              class="popins-font font-bold text-[#1C1E21] text-xl lg:text-2xl"
+              class="popins-font font-bold text-[#1C1E21] text-xl xl:text-2xl"
             >
               My Courses
             </h2>

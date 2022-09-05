@@ -1,7 +1,9 @@
 <template>
-  <section id="mainContent" class="px-2 py-10 space-y-10">
+  <section id="mainContent" class="xl:px-2 pt-3 xl:py-10 space-y-10">
     <!-- sidebard and middle content container  -->
-    <section class="flex w-full gap-7 xl:justify-end 2xl:justify-center">
+    <section
+      class="flex flex-col xl:flex-row w-full px-2 gap-7 xl:justify-end 2xl:justify-center max-w-[780px] mx-auto xl:mx-0 xl:max-w-max"
+    >
       <!-- middle content container  -->
       <div class="flex flex-col max-w-[780px] rounded-[9px] h-fit">
         <TestVideoVue />
@@ -11,8 +13,10 @@
       </div>
       <RightSidebarVue />
     </section>
+    <div class="xl:px-2">
+      <AccesVue />
+    </div>
 
-    <AccesVue />
     <FooterVue />
   </section>
 </template>

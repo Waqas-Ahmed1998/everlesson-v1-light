@@ -20,7 +20,7 @@
         </p>
       </div>
       <!-- video wrapper  -->
-      <div class="flex w-full xl:aspect-auto min-h-[176px] lg:min-h-[443px]">
+      <div class="flex w-full xl:aspect-auto min-h-[176px] md:min-h-[443px]">
         <iframe
           class="w-full min-h-full"
           src="https://www.youtube.com/embed/0mm57rH1sTE"

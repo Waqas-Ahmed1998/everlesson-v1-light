@@ -3,7 +3,7 @@
     <!-- video container  -->
     <div class="w-full">
       <!-- video wrapper  -->
-      <div class="flex w-full aspect-auto min-h-[443px]">
+      <div class="flex w-full aspect-auto min-h-[200px] md:min-h-[443px]">
         <iframe
           class="w-full min-h-full"
           src="https://www.youtube.com/embed/0mm57rH1sTE"
@@ -13,11 +13,11 @@
           allowfullscreen
         ></iframe>
       </div>
-      <section class="px-10 py-5">
+      <section class="px-4 xl:px-10 py-5">
         <!-- video heading and icons  -->
         <div class="space-y-1 flex justify-between items-center">
           <h2
-            class="popins-font text-lg md:text-xl lg:text-2xl xl:text-[34px] xl:leading-[52px] font-bold text-[#1C1E21]"
+            class="popins-font text-base md:text-lg lg:text-2xl xl:text-[34px] xl:leading-[52px] font-bold text-[#1C1E21]"
           >
             Load Your Profile Picture
           </h2>
@@ -26,6 +26,7 @@
             <!-- bookmark icon  -->
             <i class="cursor-pointer"
               ><svg
+                class="w-[18px] h-[18px] lg:w-[23px] lg:h-[23px]"
                 width="19"
                 height="23"
                 viewBox="0 0 19 23"
@@ -43,6 +44,7 @@
             <!-- share icon  -->
             <i class="cursor-pointer"
               ><svg
+                class="w-[18px] h-[18px] lg:w-[23px] lg:h-[23px]"
                 width="23"
                 height="23"
                 viewBox="0 0 23 23"
@@ -100,12 +102,12 @@
             />
           </div>
           <span
-            class="roboto-font font-light text-[#696973] gap-2 text-sm flex items-center"
+            class="roboto-font font-light text-[#696973] gap-2 text-xs lg:text-sm flex items-center"
             >Perry Belcher & Chad Nicely</span
           >
 
           <span
-            class="roboto-font font-light text-[#696973] gap-2 text-sm flex items-center"
+            class="roboto-font font-light text-[#696973] gap-2 text-xs lg:text-sm flex items-center"
             ><i
               ><svg
                 width="22"

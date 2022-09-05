@@ -1,12 +1,12 @@
 <template>
-  <section id="mainContent" class="px-0 lg:py-10 lg:space-y-10">
+  <section id="mainContent" class="px-0 pt-3 xl:py-10 lg:space-y-10">
     <!-- sidebard and middle content container  -->
     <section
-      class="flex flex-col xl:flex-row w-full xl:gap-7 xl:justify-end 2xl:justify-center px-6"
+      class="flex flex-col xl:flex-row w-full xl:gap-7 xl:justify-end 2xl:justify-center px-6 lg:max-w-[780px] xl:max-w-max mx-auto"
     >
       <!-- middle content container  -->
       <div
-        class="flex flex-col xl:max-w-[780px] lg:bg-[#F1F1F5] rounded-[9px] px-0 lg:px-16 lg:py-11"
+        class="flex flex-col mx-auto xl:mx-0 lg:max-w-[780px] lg:bg-[#F1F1F5] rounded-[9px] px-0 lg:px-16 lg:py-11"
       >
         <VideoContentVue />
 
