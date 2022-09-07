@@ -59,7 +59,7 @@
     >
       <!-- nav links wrapper  -->
       <div
-        :class="` transition-opacity xl:opacity-[1] z-[-1]  xl:w-fit   bg-black/50  relative    ${
+        :class="` transition-opacity xl:opacity-[1] z-[-1]  xl:w-fit  bg-black/50 xl:bg-transparent   relative    ${
           mobileBurgerManue
             ? '  ease-out  duration-200 opacity-[1] w-[100vw]   '
             : '  duration-300 opacity-[0]   w-0'
@@ -67,7 +67,7 @@
       >
         <!-- mobile nav close icon  -->
         <i
-          @click="mobileBurgerManue = false"
+          @click="mobileNavClose"
           :class="`absolute inline-block top-8 right-5 z-[220] xl:hidden transition-all ${
             mobileBurgerManue
               ? ' translate-x-[0%] duration-300 ease-out'
@@ -100,7 +100,11 @@
             mobileBurgerManue
               ? ' -translate-x-[0]  ease-out  duration-200  z-[205]  px-2 '
               : ' -translate-x-[100%] xl:translate-x-0   ease-in-out duration-300  '
-          } h-screen relative   bg-white flex  shadow-[2px_0_8px_#E7E7EE] xl:shadow-none rounded-[0px_18px_18px_0px] xl:rounded-none  w-fit xl:px-2 flex-col justify-between   pb-10 pt-24 xl:py-12 xl:pb-0`"
+          } h-screen relative   bg-white flex  shadow-[2px_0_8px_#E7E7EE] xl:shadow-none ${
+            sideNavCollapse
+              ? ''
+              : 'transition-all ease-in-out  delay-75 rounded-[0px_18px_18px_0px]'
+          }  xl:rounded-none  w-fit xl:px-2 flex-col justify-between   pb-10 pt-24 xl:py-12 xl:pb-0 `"
         >
           <!-- logo  -->
           <span
@@ -188,6 +192,7 @@
 
             <!-- folder icon  -->
             <i
+              @click="sideNavCollapse = !sideNavCollapse"
               class="cursor-pointer block p-[8px] xl:p-[10px] rounded-full transition-colors ease-in-out duration-150 [@media(hover:hover)]:hover:bg-[#F1F1F5]"
             >
               <svg
@@ -319,21 +324,26 @@
             </span>
           </div>
         </section>
+        <!--******** nav link wrapper end  -->
       </div>
 
       <!-- **************nav side manue***********  -->
       <section
-        :class="`hidden xl:block pt-28 ease-in-out duration-200  ${
+        :class="` pt-28 ease-in-out duration-200  ${
           !sideNavCollapse
-            ? 'transition-all   w-[65px]'
-            : 'transition-all  w-[252px]'
-        }  bg-[#F1F1F5] rounded-[42px_0_0_42px] ml-2 relative`"
+            ? 'transition-all w-0 xl:w-[65px] opacity-0 xl:opacity-100'
+            : 'transition-all opacity-100 w-[180px]  xl:w-[252px] '
+        }       ${
+          !mobileBurgerManue ? ' left-0 ' : 'left-[50px] xl:left-0'
+        }   bg-[#F1F1F5] xl:rounded-[42px_0_0_42px] min-h-screen xl:ml-2 top-0   absolute  xl:relative   `"
       >
+        <!-- absolute left-10 xl:0 xl:top-auto top-0 -->
+
         <!-- nav no collpase icon  -->
         <i
           @click="sideNavCollapse = true"
           v-show="!sideNavCollapse"
-          class="inline-block absolute top-12 -right-4 cursor-pointer z-[201]"
+          class="absolute top-12 -right-4 cursor-pointer z-[201] hidden xl:inline-block"
           ><svg
             width="32"
             height="32"
@@ -392,7 +402,8 @@
             !sideNavCollapse
               ? 'opacity-0 pointer-events-none'
               : ' transition-opacity ease-in-out delay-75 duration-200 opacity-100 pointer-events-auto'
-          }`"
+          }
+          `"
         >
           <!-- nav search bar and heading   -->
           <div class="px-6 space-y-14 mb-14">
@@ -411,6 +422,7 @@
               <!-- search icon  -->
               <i class="cursor-pointer"
                 ><svg
+                  class="scale-[0.8] lg:scale-[1]"
                   width="15"
                   height="15"
                   viewBox="0 0 15 15"
@@ -591,7 +603,7 @@
                     </i>
                     <!-- sub manue header text  -->
                     <span
-                      class="roboto-font font-light text-[12px] text-[#171724]"
+                      class="roboto-font font-light text-[11px] lg:text-[12px] text-[#171724]"
                       >Workshop Warm-up Sessions</span
                     >
                   </div>
@@ -599,34 +611,34 @@
                   <!-- wrapper  -->
                   <div v-if="sideSubManueUpdates">
                     <div
-                      class="pl-16 py-4 [@media(hover:hover)]:hover:bg-[#D5D5DC] transition-colors ease-in-out duration-200 cursor-pointer select-none"
+                      class="pl-14 lg:pl-16 py-4 [@media(hover:hover)]:hover:bg-[#D5D5DC] transition-colors ease-in-out duration-200 cursor-pointer select-none"
                     >
                       <span
-                        class="roboto-font font-light text-[11px] text-[#1C1E21]"
+                        class="roboto-font font-light text-[10px] lg text-[10px]:lg:text-[11px] text-[#1C1E21]"
                         >Load Your Profile Picture</span
                       >
                     </div>
                     <div
-                      class="pl-16 py-4 [@media(hover:hover)]:hover:bg-[#D5D5DC] transition-colors ease-in-out duration-200 cursor-pointer select-none"
+                      class="pl-14 lg:pl-16 py-4 [@media(hover:hover)]:hover:bg-[#D5D5DC] transition-colors ease-in-out duration-200 cursor-pointer select-none"
                     >
                       <span
-                        class="roboto-font font-light text-[11px] text-[#1C1E21]"
+                        class="roboto-font font-light text-[10px] lg:text-[11px] text-[#1C1E21]"
                         >Load Your Profile Picture</span
                       >
                     </div>
                     <div
-                      class="pl-16 py-4 [@media(hover:hover)]:hover:bg-[#D5D5DC] transition-colors ease-in-out duration-200 cursor-pointer select-none"
+                      class="pl-14 lg:pl-16 py-4 [@media(hover:hover)]:hover:bg-[#D5D5DC] transition-colors ease-in-out duration-200 cursor-pointer select-none"
                     >
                       <span
-                        class="roboto-font font-light text-[11px] text-[#1C1E21]"
+                        class="roboto-font font-light text-[10px] lg:text-[11px] text-[#1C1E21]"
                         >Load Your Profile Picture</span
                       >
                     </div>
                     <div
-                      class="pl-16 py-4 [@media(hover:hover)]:hover:bg-[#D5D5DC] transition-colors ease-in-out duration-200 cursor-pointer select-none"
+                      class="pl-14 lg:pl-16 py-4 [@media(hover:hover)]:hover:bg-[#D5D5DC] transition-colors ease-in-out duration-200 cursor-pointer select-none"
                     >
                       <span
-                        class="roboto-font font-light text-[11px] text-[#1C1E21]"
+                        class="roboto-font font-light text-[10px] lg:text-[11px] text-[#1C1E21]"
                         >Load Your Profile Picture</span
                       >
                     </div>
@@ -763,7 +775,7 @@
                     </i>
                     <!-- sub manue header text  -->
                     <span
-                      class="roboto-font font-light text-[12px] text-[#171724]"
+                      class="roboto-font font-light text-[11px] lg:text-[12px] text-[#171724]"
                       >Workshop Warm-up Sessions</span
                     >
                   </div>
@@ -771,34 +783,34 @@
                   <!-- wrapper  -->
                   <div v-if="sideSubManueWorkshop">
                     <div
-                      class="pl-16 py-4 [@media(hover:hover)]:hover:bg-[#D5D5DC] transition-colors ease-in-out duration-200 cursor-pointer select-none"
+                      class="pl-14 lg:pl-16 py-4 [@media(hover:hover)]:hover:bg-[#D5D5DC] transition-colors ease-in-out duration-200 cursor-pointer select-none"
                     >
                       <span
-                        class="roboto-font font-light text-[11px] text-[#1C1E21]"
+                        class="roboto-font font-light text-[10px] lg:text-[11px] text-[#1C1E21]"
                         >Load Your Profile Picture</span
                       >
                     </div>
                     <div
-                      class="pl-16 py-4 [@media(hover:hover)]:hover:bg-[#D5D5DC] transition-colors ease-in-out duration-200 cursor-pointer select-none"
+                      class="pl-14 lg:pl-16 py-4 [@media(hover:hover)]:hover:bg-[#D5D5DC] transition-colors ease-in-out duration-200 cursor-pointer select-none"
                     >
                       <span
-                        class="roboto-font font-light text-[11px] text-[#1C1E21]"
+                        class="roboto-font font-light text-[10px] lg:text-[11px] text-[#1C1E21]"
                         >Load Your Profile Picture</span
                       >
                     </div>
                     <div
-                      class="pl-16 py-4 [@media(hover:hover)]:hover:bg-[#D5D5DC] transition-colors ease-in-out duration-200 cursor-pointer select-none"
+                      class="pl-14 lg:pl-16 py-4 [@media(hover:hover)]:hover:bg-[#D5D5DC] transition-colors ease-in-out duration-200 cursor-pointer select-none"
                     >
                       <span
-                        class="roboto-font font-light text-[11px] text-[#1C1E21]"
+                        class="roboto-font font-light text-[10px] lg:text-[11px] text-[#1C1E21]"
                         >Load Your Profile Picture</span
                       >
                     </div>
                     <div
-                      class="pl-16 py-4 [@media(hover:hover)]:hover:bg-[#D5D5DC] transition-colors ease-in-out duration-200 cursor-pointer select-none"
+                      class="pl-14 lg:pl-16 py-4 [@media(hover:hover)]:hover:bg-[#D5D5DC] transition-colors ease-in-out duration-200 cursor-pointer select-none"
                     >
                       <span
-                        class="roboto-font font-light text-[11px] text-[#1C1E21]"
+                        class="roboto-font font-light text-[10px] lg:text-[11px] text-[#1C1E21]"
                         >Load Your Profile Picture</span
                       >
                     </div>
@@ -809,6 +821,7 @@
           </section>
         </main>
       </section>
+      <!-- </div> -->
     </nav>
   </div>
 </template>
@@ -827,7 +840,14 @@ export default {
       homeIconSelected: false,
       paperIconSelected: false,
       mobileBurgerManue: false,
+      isFolder: false,
     }
+  },
+  methods: {
+    mobileNavClose() {
+      this.sideNavCollapse = false
+      this.mobileBurgerManue = false
+    },
   },
 }
 </script>
